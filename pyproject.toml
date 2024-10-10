@@ -1,0 +1,32 @@
+[build-system]
+requires = ["flit_core >=3.2,<4"]
+build-backend = "flit_core.buildapi"
+
+[project]
+name = "rfm_model_based_customer_segmentation"
+version = "0.0.1"
+description = "ACustomer segmentation boon the basis of Recency, Frequency, and Monetary using a k-means clustering algorithm."
+authors = [
+  { name = "John Harmer" },
+]
+license = { file = "LICENSE" }
+readme = "README.md"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License"
+]
+requires-python = "~=3.11.5"
+
+[tool.black]
+line-length = 99
+include = '\.pyi?$'
+exclude = '''
+/(
+    \.git
+  | \.venv
+)/
+'''
+
+[tool.ruff.lint.isort]
+known_first_party = ["rfm_model_based_customer_segmentation"]
+force_sort_within_sections = true
